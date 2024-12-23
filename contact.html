@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      
+      body {
+        background:rgb(12, 22, 71);
+        background-size: cover;
+        font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+        height: 100vh;
+        margin: 0;
+      }
+      .form{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contact-form-container {
+        backdrop-filter: blur(4px);
+        padding: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        
+        animation: fadeIn 1s ease-in-out;
+      }
+      .contact-form-container{
+        max-width: 600px;
+        border-radius: 15px;
+      }
+      .contact-form h2 {
+        font-family: "Playfair Display", Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: #b3acac;
+      }
+      .input-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+      .input-group input,
+      .input-group textarea {
+        width: 100%;
+        padding: 10px;
+        background: transparent;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+        color: white;
+      }
+      .input-group label {
+        position: absolute;
+        top: 5px;
+        left: 15px;
+        transition: all 0.3s ease-in-out;
+        color: #b5b5b5;
+      }
+      .input-group input:focus + label,
+      .input-group textarea:focus + label,
+      .input-group input:valid + label,
+      .input-group textarea:valid + label {
+        top: -10px;
+        left: 10px;
+        color: #acacac;
+        font-size: 12px;
+        padding: 0 5px;
+        background-color:rgb(12, 22, 71);
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+        background-color: #c300ff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      button:hover {
+        background-color: #fb01ff9b;
+      }
+      @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(-10px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><img src="" alt=""></div>
+        <a href="index.html">Home</a>
+        <a href="">Trending</a>
+        <a href="products.html">Categories</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="">User</a>
+    </nav>
+  </header>
+  <section class="form">
+
+
+    <div class="contact-form-container" role="outer-box">
+        <form class="contact-form" role="main-form">
+            <h2>Contact Us</h2>
+            <div class="input-group" role="name-input" aria-label="name">
+                <input type="text" name="name" required  >
+                <label for="name">Name</label>
+            </div>
+            <div class="input-group" role="email-input" aria-label="email">
+                <input type="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group" role="message-input" aria-label="message">
+                <textarea name="message" rows="4" required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2024 GameStore. All rights reserved.</p>
+    <a href="index.html">Home</a>
+    <a href="">Trending</a>
+    <a href="products.html">Categories</a>
+    <a href="contact.html">Contact Us</a>
+</footer>
+</body>
+</html>

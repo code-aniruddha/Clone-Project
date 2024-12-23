@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign Up</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      
+      body {
+        background-image: url(bg3.png);
+        backdrop-filter: blur(10px);
+        background-size: cover;
+        font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        animation: blur 0.5s linear;
+      }
+      .contact-form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        border-radius: 15px;
+        backdrop-filter: blur(4px);
+        padding: 40px 40px 40px 40px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0px 100px rgb(78, 0, 114);
+        width: 100%;
+        animation: fadeIn 1s ease-in-out;
+      }
+     .contact-form{
+      width: 80%;
+     }
+      .contact-form h2 {
+        font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: #b3acac;
+      }
+      .input-group {
+        position: relative;
+        margin-top: 20px;
+      }
+      .input-group input{
+        width: 100%;
+        position: relative;
+        left: -10px;
+        padding: 15px;
+        background: transparent;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        outline: none;
+        transition: all 0.3s ease-in-out;
+        color: white;
+      }
+      .input-group label {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        transition: all 0.3s ease-in-out;
+        color: #b5b5b5;
+      }
+      .input-group input:focus + label,
+     .input-group input:valid + label
+       {
+        top: -10px;
+        left: 5px;
+        color: #acacac;
+        font-size: 15px;
+        padding: 0 5px;
+        background-color: rgba(0, 0, 0, 0.888);
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+        background-color:transparent;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border: 1px solid white;
+        transition: background-color 0.3s ease-in-out;
+      }
+      button:hover {
+        color: black;
+        background-color: #ffffffd7;
+      }
+      .extralink{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      #sign{
+        padding: 5px;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+        transition: all 0.5s linear;
+      }
+      #sign:hover{
+        color: black;
+        background: white;
+      }
+@keyframes blur {
+  from{
+    filter: blur(50px);
+  }
+  to{
+    filter: blur(0);
+  }
+  
+}
+      @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+    }
+      a > img{
+        height: 100px;
+        width: 100%;
+      }
+      .signapp{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .signapp > img{
+        height: 70px;
+        width: 120px;
+        border-radius: 10px;
+        transition: all 0.2s linear;
+        cursor: pointer;
+      }
+      .signapp > img:hover{
+        border: 1px solid white;
+        scale: 1.1;
+      }
+      #xbox:hover{
+        filter: drop-shadow(0 0 10px rgba(0, 186, 0, 0.596));
+      }
+      #play:hover{
+        filter: drop-shadow(0 0 10px rgba(0, 65, 204, 0.64));
+      }
+      #nintendo:hover{
+        filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.651));
+      }
+      #apple:hover{
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.642));
+      }
+      #google:hover{
+        filter: drop-shadow(0 0 10px rgba(186, 186, 186, 0.647));
+      }
+      #fb:hover{
+        filter: drop-shadow(0 0 10px rgba(0, 43, 183, 0.642));
+      }
+      span{
+        text-decoration: none;
+        color: white;
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+      }
+     
+    </style>
+</head>
+<body>
+    <div class="contact-form-container" role="outer-box">
+      <a href="index.html"><img src="logo.png" alt="" ></a>
+        <form class="contact-form" role="main-form">
+            <h2>Sign Up</h2>
+            <div class="input-group" role="name-input" aria-label="name">
+              <input type="text" name="name" required id="name" >
+              <label for="name">Name</label>
+          </div>
+          <div class="input-group" role="email-input" aria-label="email">
+            <input type="email" name="email" required id="email">
+            <label for="email">Email</label>
+        </div>
+            <div class="input-group" role="password-input" aria-label="password">
+                <input type="password" name="password" required id="password">
+                <label for="password">Password</label>
+              </div>
+              <div class="extralink">
+                <a href="signIn.html" id="sign">Already Have A Account ?</a>
+              </div>
+  
+            <button type="submit" onclick="Add()">Sign Up</button>
+        </form>
+        <span >Or Sign Up With </span>
+      
+        <div class="signapp">
+          <img src="Screenshot 2024-12-19 213526.png" alt="" id="xbox">
+          <img src="Screenshot 2024-12-19 213535.png" alt="" id="play">
+          <img src="Screenshot 2024-12-19 213547.png" alt="" id="nintendo">
+        </div>
+          <div class="signapp">
+          <img src="Screenshot 2024-12-19 213557.png" alt="" id="apple">
+          <img src="Screenshot 2024-12-19 213605.png" alt="" id="google">
+          <img src="Screenshot 2024-12-19 213613.png" alt="" id="fb">
+        </div>
+    </div>
+    <script>
+      let nameInput = document.getElementById('name');
+      let emailInput = document.getElementById('email');
+      let passwordInput = document.getElementById('password');
+      let signin = document.getElementsByName('button');
+     
+      function Add(){
+        
+        if(nameInput.value && emailInput.value && passwordInput){
+          localStorage.setItem(emailInput.value,passwordInput.value);
+          clickAnchor();
+          alert('Signed Up Successfully, Please Login.');
+        };
+      }
+      function clickAnchor(){
+      var link = document.getElementById('sign');
+      link.click();
+    }
+      
+      
+    </script>
+</body>
+</html>
+
+
+
+
+
+
