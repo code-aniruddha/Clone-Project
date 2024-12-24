@@ -18,6 +18,31 @@ body {
   animation: blur 1s ease-in;
 }
 
+@media screen and (min-width: 320px) and (max-width: 900px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-size: 20px;
+    min-width: 100vh;
+    scale: 1;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .game, .all-games-1, .gameInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 @keyframes blur {
   from {
     filter: blur(100px);
@@ -37,6 +62,7 @@ main h1 {
 }
 
 nav {
+  overflow: hidden;
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid white;
@@ -47,17 +73,23 @@ nav img {
   top: -30px;
   height: 100px;
 }
+nav img:hover {
+  filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+}
 nav a {
   text-decoration: none;
   font-size: 20px;
   padding-top: 40px;
   color: white;
 }
+nav a:hover {
+  color: rgb(0, 42, 255);
+}
 
 .all-games-1 {
   display: flex;
   justify-content: space-around;
-  margin: 20px;
+  margin-top: 10px;
   padding: 30px;
 }
 
@@ -93,7 +125,7 @@ nav a {
 }
 
 .gameInfo {
-  padding-left: 10px;
+  margin-left: 10px;
 }
 .gameInfo h3 {
   padding: 10px;
@@ -137,26 +169,34 @@ footer img {
 }
 footer .foot1 {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 footer .socialLinks {
+  margin-top: 20px;
   display: flex;
   justify-content: space-around;
 }
 footer .foot2 {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 footer .signup {
   padding: 20px;
   position: relative;
   top: 10px;
-  left: 250px;
 }
 footer input {
-  background-color: transparent;
-  padding: 10px;
+  background-color: white;
+  padding: 20px 10px 20px 10px;
   border: 1px solid white;
-  border-radius: 20px;
+  border-radius: 10px;
   height: 40px;
+  font-size: 1rem;
   width: 250px;
 }
 footer button {
@@ -166,5 +206,11 @@ footer button {
   height: 40px;
   color: white;
   border: 1px solid white;
-  border-radius: 30px;
+  border-radius: 10px;
+  transition: all 0.5s linear;
+}
+footer button:hover {
+  cursor: pointer;
+  color: black;
+  background: white;
 }/*# sourceMappingURL=style.css.map */

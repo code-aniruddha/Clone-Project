@@ -6,6 +6,20 @@
   <title>TeckyBuck</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    @media screen and (min-width : 320px) and (max-width:900px){
+    
+    body{
+    
+    }
+    .box1{
+      overflow: hidden;
+      width: 70%;
+    }
+  video{
+    width: 100%;
+    scale: 1;
+  }
+}
     *{
       transition: all linear;
     }
@@ -16,7 +30,7 @@
       justify-content: center;
     }
     .box1{
-      width: 110%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -46,9 +60,10 @@
       color: rgb(0, 0, 0);
     }
     video{
-      margin: 0;
+      margin-top: 40px;
       padding: 0;
       width: 100%;
+      transform: scale(1.1);
     }
     .box2{
       margin-top: 50px;
@@ -68,14 +83,14 @@
       transition: all 0.5s linear;
     }
     .animatedText{
-      border: 1px solid white;
       padding: 20px;
-       border-radius: 12px;
+      border-radius: 12px;
     }
     .animatedText h1,.animatedText h2{
       overflow: hidden;
       white-space: nowrap; 
       margin: 0 auto; 
+      text-shadow: 0px 0px 10px rgba(0, 76, 255, 0.651);
       letter-spacing: 5px; /* Adjust as needed */
       animation: typing 4s steps(40, end);
       animation-delay: 1s;
@@ -94,6 +109,30 @@
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+.game-category{
+  margin-top: 40px;
+  padding: 20px 10px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.categories{
+  padding: 20px;
+}
+.game-category span{
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.5s linear;
+}
+.game-category span:hover{
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
   </style>
 </head>
@@ -118,6 +157,18 @@
    <section class="animatedText">
       <h1 style="position: relative; top: -10px;">Dive In The World Of Gaming</h1>
    </section>
+      <div class="categories">
+    <h1>Categories</h1>
+    <div class="game-category">
+      <span onclick="goToError()">Action Games</span>
+      <span onclick="goToError()">RolePlay</span>
+      <span onclick="goToError()">Adventure</span>
+      <span onclick="goToError()">Puzzle</span>
+      <span onclick="goToError()">Multiplayer Games</span>
+      <span onclick="goToError()">Sports</span>
+    </div>
+   </div>
+
    <section class="box2">
     <img src="d951f2ed-babb-4257-aba1-b5f870ebc392.jpg" alt="">
     <section class="info" id="info2">
@@ -125,6 +176,7 @@
     </section>
    </section>
    <a href="games.html" style="display: none;" id="next"></a>
+   <a href="serverError.html" style="display: none;" id="error"></a>
 </main>
 <footer>
   <div class="foot1">
@@ -150,7 +202,11 @@
     function clickAnchor(){
       var link = document.getElementById('next');
       link.click();
-}
+    }
+    function goToError(){
+      var link = document.querySelector('#error');
+      link.click();
+    }
 </script>
 </body>
 </html>
