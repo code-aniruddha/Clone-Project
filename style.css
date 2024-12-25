@@ -25,8 +25,21 @@ body {
   }
   body {
     font-size: 20px;
-    min-width: 100vh;
-    scale: 1;
+    min-width: 100vw;
+  }
+  nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  nav a:nth-child(2) {
+    position: relative;
+    top: -23px;
+  }
+  nav a img {
+    position: absolute;
+    top: -10px;
+    left: 53px;
+    width: 300px;
   }
   main {
     display: flex;
@@ -41,6 +54,22 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  footer {
+    overflow: hidden;
+  }
+  footer .foot1 .socialLinks {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .foot1 img {
+    height: 40px;
+  }
+  footer .foot2 input {
+    width: 190px;
+  }
+  footer .foot2 button {
+    margin-top: 10px;
   }
 }
 @keyframes blur {

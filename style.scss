@@ -23,14 +23,28 @@ body {
   *{
     margin: 0;
     padding: 0;
-    
-  
   }
   body{
+   
     font-size: 20px;
-    min-width: 100vh;
-    scale: 1;
- 
+    min-width: 100vw;
+  }
+  nav{
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+    a {
+      &:nth-child(2){
+        position: relative;
+        top: -23px;
+      }
+    img{
+      position:absolute;
+      top: -10px;
+      left: 53px;
+      width:300px;
+    }
+  }
   }
   main{
     display: flex;
@@ -45,6 +59,27 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  footer{
+    overflow: hidden;
+    .foot1{
+      .socialLinks{
+        flex-direction: column;
+        text-align: center;
+      }
+      img{
+        height: 40px;
+      }
+    }
+    .foot2{
+      input{
+        width: 190px;
+      }
+      button{
+        margin-top: 10px;
+      }
+    }
+  
   }
   
   
