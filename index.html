@@ -15,6 +15,9 @@
       overflow: hidden;
       width: 70%;
     }
+    .changeVideo{
+  display: none;
+}
   video{
     width: 100%;
     scale: 1;
@@ -133,6 +136,24 @@
 .game-category span:hover{
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
+} 
+.changeVideo{
+  height: 200px;
+  width: 200px;
+  cursor:url("png-clipart-neat-cat-prints-cats-paw-cat-removebg-preview.png"),auto;
+ 
+}
+
+
+#changeVideo1{
+  position: absolute;
+  left : 60%;
+  top: 28%;
+}
+#changeVideo2{
+  position: absolute;
+  left : 80%;
+  top: 25%;
 }
   </style>
 </head>
@@ -149,7 +170,9 @@
 </header>
 <main>
   <section class="box1">
-    <video src="bg.mp4" loop muted autoplay></video>
+    <video src="bg.mp4" loop muted autoplay id="bgvideo"></video>
+    <div class="changeVideo" onclick="changeVideo1to2()" id="changeVideo1" style="display: block;"></div>
+    <div class="changeVideo" onclick="changeVideo2to1()" id="changeVideo2" style="display: none;"></div>
     <section class="info animatedText" id="info1" onclick="clickAnchor()">
     <h2>Explore Games</h2>
     </section>
@@ -206,6 +229,18 @@
     function goToError(){
       var link = document.querySelector('#error');
       link.click();
+    }
+    function changeVideo1to2(){
+      let video = document.getElementById('bgvideo');
+      video.src = "bg2.mp4";
+      document.getElementById('changeVideo1').style.display = "none";
+      document.getElementById('changeVideo2').style.display = "block";
+    }
+    function changeVideo2to1(){
+      let video = document.getElementById('bgvideo');
+      video.src = "bg.mp4";
+      document.getElementById('changeVideo2').style.display = "none";
+      document.getElementById('changeVideo1').style.display = "block";
     }
 </script>
 </body>
