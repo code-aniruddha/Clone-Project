@@ -186,7 +186,7 @@ nav {
 }
 footer{
   width: 100%;
-  height: 220px;
+  height: 260px;
   border-top:$border-white;
   background: transparent;
   display: flex;
@@ -204,10 +204,12 @@ footer{
   }
   .foot1{
     width: 50%;
+  
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   .socialLinks{
     margin-top: 20px;
     display: flex;

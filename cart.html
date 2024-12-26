@@ -6,6 +6,36 @@
   <title>Cart</title>
   <link rel="stylesheet" href="style.css">
   <style>
+     @media screen and (min-width : 320px) and (max-width:900px){
+        body{
+          min-width: 100vw;
+          font-size: 10px;
+        }
+        .list-items span{
+          font-size: 12px;
+        }
+        main{
+          overflow-x:hidden;
+          min-width: 100%;
+        }
+      .list-items {
+        overflow-x:hidden;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 80px 80px 50px 80px 50px ;
+      }
+      
+      .list-items img{
+        max-height: 30px;
+      }
+
+  
+
+     
+      
+
+      
+      }
     main{
       width: 100%;
       display: flex;
@@ -18,12 +48,11 @@
       color: white;
     width: 100%;
     display: grid;
+    
     grid-template-columns: 200px 200px 100px 200px 100px;
+
     text-align: center;
-    row-gap: 50px;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
+    row-gap: 20px;
     padding: 20px;
     margin: 10px;
   }
@@ -32,8 +61,8 @@
     background: transparent
   }
   button{
-      padding: 20px;
-      margin-top: 10px;
+      padding: 10px;
+      margin-top: 5px;
       border-radius: 20px;
       border: white 1px solid;
       color: rgb(255, 255, 255);
@@ -64,7 +93,7 @@
  <main>
   <section class="list">
   </section>
-  <button onclick="goToPay()">CheckOut</button>
+  <button onclick="goToPay()" style="margin-bottom: 20px;">CheckOut</button>
   </main>
  <footer>
   <div class="foot1">

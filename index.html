@@ -7,22 +7,55 @@
   <link rel="stylesheet" href="style.css">
   <style>
     @media screen and (min-width : 320px) and (max-width:900px){
+      *{
+        overflow-x: hidden;
+      }
+     
+      body {
+        min-width: 100vw;
+        font-size: 14px;  
+        overflow-x: hidden;
+
+      }
+      main{
+        width: 105%;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+      }
+      .animatedText h1,
+      .animatedText h2 {
+        font-size: 0.8rem;
+        overflow-x: hidden;
+      }
+      video{
+        overflow-x: hidden;
+      }
+      .game-category {
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+      }
+      #info1{
+      top: -50px;
+      left: -10px;
+      width: 40%;
+      font-size: 12px;
+      padding: 10px 20px;
+      overflow-x: hidden;
+    }
+    .info{
+      padding: 10px;
+      overflow-x: hidden;
+    }
+    #info2{
+      font-size: 12px;
+      top: 0px;
+      overflow-x: hidden;
+    }
     
-    body{
-      min-width: 100vh;
-    }
-    .box1{
-      overflow: hidden;
-      width: 70%;
-    }
-    .changeVideo{
-  display: none;
-}
-  video{
-    width: 100%;
-    scale: 1;
   }
-}
+
     *{
       transition: all linear;
     }
@@ -52,10 +85,11 @@
       transition: all 0.5s linear;
       color: rgb(255, 255, 255);
       cursor: pointer;
+      position: relative;
+      
     }
     #info1{
-      position: relative;
-      bottom: 155px;
+      bottom: 150px;
       left: -10px;
     }
     .info:hover{
@@ -71,15 +105,14 @@
     }
     .box2{
       margin-top: 50px;
-      width: 60%;
+      width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
     #info2{
-      position: relative;
-      top: -220px;
+      top: -10vh;
     }
     .box2 img{
       border-radius: 20px;
