@@ -27,17 +27,16 @@
 </header>
 <section class="game">
   <section class="gameName">
-  <img src="k.png" alt="" style="height: 300px;">
+  <img src="gta.png" alt="" style="height: 300px;">
   <section class="game-name">
-    <h1>God Of War</h1>
-    <p>Ragnarok</p>
+    <h1>GTA : V</h1>
   </section>
 </section>
 <section class="gameInfo">
   <h3>About : In "God of War Ragnarok," Kratos and his son Atreus must navigate the Nine Realms of Norse mythology to find answers and prepare for the prophesied end-of-the-world event, Ragnarök, while facing off against powerful Norse gods like Odin and Thor, as they grapple with their father-son relationship and the looming fate of their family amidst a brutal, three-year winter known as Fimbulwinter; the story focuses heavily on themes of destiny, letting go, and the complex bond between Kratos and Atreus. </h3>
   <h3>Developer : Santa Monica Studio</h3>
   <h3>Available On : PS5, PS4, PC </h3>
-  <h3>Price : ₹2,499 </h3>
+  <h3>Price : ₹1500 </h3>
   <button onclick="goToPay()">Buy Now</button>
   <button onclick="addToCart()">Add To Cart</button>
   <h3>All Types Of Card Are Accepted.</h3>
@@ -69,9 +68,9 @@
   function addToCart() {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const newItem = { 
-    id: 1,
-    name: "God Of War : Ragnarok", 
-    price: 2499,
+    id: 3,
+    name: "GTA : V", 
+    price: 1500,
     quantity : 1,
   };
   const itemIndex = cart.findIndex(item => item.id === newItem.id);

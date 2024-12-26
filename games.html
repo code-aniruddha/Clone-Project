@@ -8,20 +8,20 @@
 </head>
 <body>
     <header>
-        <nav>
-          <a href="index.html"><img src="logo.png" alt=""></a>
-          <a href="index.html">Home</a>
-          <a href="games.html">Categories</a>
-          <a href="games.html">Top 10</a>
-          <a href="serverError.html">Support</a>
-          <a href="signIn.html">Login</a>
-        </nav>
+      <nav>
+        <a href="index.html"><img src="logo.png" alt=""></a>
+        <a href="index.html">Home</a>
+        <a href="games.html">Categories</a>
+        <a href="serverError.html">Support</a>
+        <a href="signIn.html">Login</a>
+        <a href="cart.html">Go To Cart</a>
+      </nav>
     </header>
     <main>
       <h1>Top Rated Games </h1>
       <section class="all-games-1">
         <section class="game">
-          <section class="gameName" onclick="clickAnchor()">
+          <section class="gameName" onclick="clickAnchor('god')">
           <img src="k.png" alt="" style="height: 300px;">
           <section class="game-name">
             <h1>God Of War</h1>
@@ -32,11 +32,11 @@
           <h3>Developer : Santa Monica Studio</h3>
           <h3>Available On : PS5, PS4, PC </h3>
           <h3>Price : ₹2,499 </h3>
-          <button onclick="clickAnchor()">Buy Now</button>
+          <button onclick="clickAnchor('god')">Buy Now</button>
         </section>
         </section>
         <section class="game">
-          <section class="gameName">
+          <section class="gameName" onclick="clickAnchor('gta')">
           <img src="gta.png" alt="">
           <section class="game-name">
             <h1>Grand Theft Auto V</h1>
@@ -46,11 +46,11 @@
           <h3>Developer : Rockstar Games</h3>
           <h3>Available On : PS5, PS4, XBOX, PC </h3>
           <h3>Price : ₹1500 </h3>
-          <button>Buy Now</button>
+          <button onclick="clickAnchor('gta')">Buy Now</button>
         </section>
         </section>
         <section class="game">
-          <section class="gameName">
+          <section class="gameName" onclick="clickAnchor('spider2')">
           <img src="spider2.png" alt="">
           <section class="game-name">
             <h1>Spider Man 2</h1>
@@ -60,13 +60,13 @@
           <h3>Developer : Insomniac Games</h3>
           <h3>Available On : PS5 </h3>
           <h3>Price : ₹3000 </h3>
-          <button>Buy Now</button>
+          <button onclick="clickAnchor('spider2')">Buy Now</button>
         </section>
         </section>
       </section>
       <section class="all-games-1">
          <section class="game">
-          <section class="gameName">
+          <section class="gameName" onclick="clickAnchor('pubg')">
           <img src="pubg.png" alt="">
           <section class="game-name">
             <h1>PlayerUnknowns BattleGrounds</h1>
@@ -76,11 +76,11 @@
           <h3>Developer : Krafton , Tencent </h3>
           <h3>Available On : PS5 , PS4, XBOX, PC</h3>
           <h3>Price : ₹1000 </h3>
-          <button>Buy Now</button>
+          <button onclick="clickAnchor('pubg')">Buy Now</button>
         </section>
         </section>
         <section class="game">
-          <section class="gameName">
+          <section class="gameName" onclick="clickAnchor('valo')">
           <img src="valo.png" alt="">
           <section class="game-name">
             <h1>Valorant</h1>
@@ -90,7 +90,7 @@
           <h3>Developer : Riot Games</h3>
           <h3>Available On : PS5, XBOX, PC </h3>
           <h3>Price : FREE </h3>
-          <button>Get Now</button>
+          <button onclick="clickAnchor('valo')">Get Now</button>
         </section>
         </section>
     </main>
@@ -114,12 +114,16 @@
       </div>
       </div>
     </footer>
-    <a href="godOfWar.html" id="next" style="display: none;"></a>
+    <a href="godOfWar.html" id="god" style="display: none;"></a>
+    <a href="gtaV.html" id="gta" style="display: none;"></a>
+    <a href="pubg.html" id="pubg" style="display: none;"></a>
+    <a href="valorant.html" id="valo" style="display: none;"></a>
+    <a href="spiderman.html" id="spider2" style="display: none;"></a>
     <script>
-      function clickAnchor(){
-      var link = document.getElementById('next');
+      function clickAnchor(x){
+      var link = document.getElementById(x);
       link.click();
-}
+    }
     </script>
 </body>
 </html>
