@@ -5,90 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-     @media screen and (min-width : 320px) and (max-width:900px){
-        body{
-          min-width: 100vw;
-          font-size: 10px;
-        }
-        .list-items span{
-          font-size: 12px;
-        }
-        main{
-          overflow-x:hidden;
-          min-width: 100%;
-        }
-      .list-items {
-        overflow-x:hidden;
-        width: 100%;
-        display: grid;
-        grid-template-columns: 80px 80px 50px 80px 50px ;
-      }
-      
-      .list-items img{
-        max-height: 30px;
-      }
-
-  
-
-     
-      
-
-      
-      }
-    main{
-      width: 100%;
-      display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    }
-     .list-items{
-      font-size: 20px;
-      color: white;
-    width: 100%;
-    display: grid;
-    
-    grid-template-columns: 200px 200px 100px 200px 100px;
-
-    text-align: center;
-    row-gap: 20px;
-    padding: 20px;
-    margin: 10px;
-  }
-  .list-items img{
-    height: 50px;
-    background: transparent
-  }
-  button{
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 20px;
-      border: white 1px solid;
-      color: rgb(255, 255, 255);
-      background-color: transparent;
-      font-size: 20px;
-      cursor: pointer;
-      transition: all 0.3s linear;
-    }
-    button:hover{
-        color: rgb(0, 0, 0);
-        background-color: rgba(255, 255, 255, 0.629);
-        box-shadow: 0px 0px 10px rgb(92, 27, 27);
-      
-    }
-  </style>
+  <link rel="stylesheet" href="cart.css">
 </head>
 <body>
   <header>
     <nav>
-           <a href="index.html"><img src="logo.png" alt=""></a>
-           <a href="index.html">Home</a>
-           <a href="games.html">Categories</a>
-           <a href="games.html">Top 10</a>
-           <a href="serverError.html">Support</a>
-           <a href="signIn.html">Login</a>
-         </nav>
+      <a href="index.html"><img src="logo.png" alt=""></a>
+      <a href="index.html">Home</a>
+      <a href="games.html">Categories</a>
+      <a href="contact.html">Support</a>
+      <a href="signIn.html">Login</a>
+      <a href="cart.html">Go To Cart</a>
+    </nav>
  </header>
  <main>
   <section class="list">
@@ -116,38 +44,6 @@
   </div>
   </div>
 </footer>
-<script>
-  let cart = JSON.parse(localStorage.getItem('cart'));
-  display();
-    function display(){
-      let displayElement = document.querySelector('.list');
-      let newHtml =`
-          <div class="list-items">
-            <span>Item name</span>
-            <span>Price</span>
-            <span>Quantity</span>
-            <span>Total</span>
-            <span>Remove</span>
-          </div>  
-        `;
-      for(let i = 0;i < cart.length;i++){
-        newHtml += `
-          <div class="list-items">
-            <span>${i + 1}. ${cart[i].name}</span>
-            <span>${cart[i].price}</span>
-             <span>${cart[i].quantity}</span>
-             <span>${cart[i].quantity} X ${cart[i].price} = ${eval(cart[i].quantity * cart[i].price)} </span>
-            <button onclick="cart.splice(${i},1);
-            display();"><img src="delete.png"></button>
-          </div>  
-        `;
-      }
-      displayElement.innerHTML = newHtml;
-    }
-    function goToPay(){
-      var link = document.getElementById('next');
-      link.click();
-    }
-</script>
+<script src="JavaScript/cart.js"></script>
 </body>
 </html>
