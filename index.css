@@ -1,0 +1,183 @@
+@media screen and (min-width : 320px) and (max-width:900px){
+  *{
+    overflow-x: hidden;
+  }
+ 
+  body {
+    min-width: 100vw;
+    font-size: 14px;  
+    overflow-x: hidden;
+
+  }
+  main{
+    width: 105%;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .animatedText h1,
+  .animatedText h2 {
+    font-size: 0.8rem;
+    overflow-x: hidden;
+  }
+  video{
+    overflow-x: hidden;
+  }
+  .game-category {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  #info1{
+  top: -50px;
+  left: -10px;
+  width: 40%;
+  font-size: 12px;
+  padding: 10px 20px;
+  overflow-x: hidden;
+}
+.info{
+  padding: 10px;
+  overflow-x: hidden;
+}
+#info2{
+  font-size: 12px;
+  top: 0px;
+  overflow-x: hidden;
+}
+
+}
+
+*{
+  transition: all linear;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.info{
+  height: fit-content;
+  backdrop-filter: blur(10px);
+  border: 1px solid white;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 20px;
+  font-size: 1.5rem;
+  top: 50%;
+  transition: all 0.5s linear;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: relative;
+  
+}
+#info1{
+  bottom: 150px;
+  left: -10px;
+}
+.info:hover{
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
+video{
+  margin-top: 40px;
+  padding: 0;
+  width: 100%;
+  transform: scale(1.1);
+  transition: all 5s linear;
+}
+.box2{
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#info2{
+  top: -10vh;
+}
+.box2 img{
+  border-radius: 20px;
+  width: 100%;
+  transition: all 0.5s linear;
+}
+.animatedText{
+  padding: 20px;
+  border-radius: 12px;
+}
+.animatedText h1,.animatedText h2{
+  overflow: hidden;
+  white-space: nowrap; 
+  margin: 0 auto; 
+  text-shadow: 0px 0px 10px rgba(0, 76, 255, 0.651);
+  letter-spacing: 5px; /* Adjust as needed */
+  animation: typing 4s steps(40, end);
+  animation-delay: 1s;
+}
+.box2 img:hover{
+filter: drop-shadow(0 0 10px white);
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange; }
+}
+.game-category{
+margin-top: 40px;
+padding: 20px 10px 20px 10px;
+display: flex;
+justify-content: space-between;
+gap: 20px;
+}
+.categories{
+padding: 20px;
+}
+.game-category span{
+font-size: 20px;
+font-weight: 500;
+cursor: pointer;
+color: white;
+border: 1px solid white;
+padding: 20px;
+border-radius: 20px;
+transition: all 0.5s linear;
+}
+.game-category span:hover{
+color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);
+} 
+.changeVideo{
+height: 200px;
+width: 200px;
+cursor:url("png-clipart-neat-cat-prints-cats-paw-cat-removebg-preview.png"),auto;
+
+}
+
+
+#changeVideo1{
+position: absolute;
+left : 60%;
+top: 28%;
+}
+#changeVideo2{
+position: absolute;
+left : 80%;
+top: 25%;
+}
