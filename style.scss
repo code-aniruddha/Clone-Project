@@ -25,26 +25,20 @@ body {
     padding: 0;
   }
   body{
-   
-    font-size: 20px;
     min-width: 100vw;
   }
   nav{
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-   
-    a {
-      &:nth-child(2){
-        position: relative;
-        top: -23px;
-      }
-    img{
-      position:absolute;
-      top: -10px;
-      left: 53px;
-      width:300px;
-    }
-  }
+   .logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -50px;
+   }
   }
   main{
     display: flex;
@@ -110,7 +104,6 @@ nav {
   height: 120px;
   img{
     position: relative;
-    top: -30px;
     height: 100px;
     &:hover{
       filter: drop-shadow(0 0 10px rgb(255, 255, 255));
@@ -118,7 +111,7 @@ nav {
   }
   a{
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.1rem;
   padding-top: 40px;
   color: $text-color;
 
