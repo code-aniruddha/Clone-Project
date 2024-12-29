@@ -31,13 +31,17 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
   }
+  nav a {
+    margin-top: 40px;
+  }
   nav .logo {
+    margin-top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -50px;
+    top: -80px;
   }
   main {
     display: flex;
