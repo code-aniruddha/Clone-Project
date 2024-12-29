@@ -161,8 +161,6 @@
 </div>
 </main>
     <script>
-        document.getElementById('amount').value = 2499;
-        // JavaScript for card type selection
         const cardTypes = document.querySelectorAll('.card-type');
         cardTypes.forEach(type => {
             type.addEventListener('click', () => {
@@ -170,7 +168,6 @@
                 type.classList.add('active');
             });
         });
-
         function pay(){
             if((document.getElementById('card-number').value != '') && (document.getElementById('card-expiry').value != '') && (document.getElementById('card-cvv').value != '') && (document.getElementById('card-number').value != '')){
 

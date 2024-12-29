@@ -40,7 +40,11 @@
   <h3>Developer : Santa Monica Studio</h3>
   <h3>Available On : PS5, PS4, PC </h3>
   <h3>Price : ₹2,499 </h3>
-  <button onclick="goToPay()">Buy Now</button>
+  <button onclick="
+  if(localStorage.getItem('login') || false){
+    goToPay();
+  } else showLoginPrompt();
+    ">Buy Now</button>
   <button onclick="addToCart()">Add To Cart</button>
   <h3>All Types Of Card Are Accepted.</h3>
   <img src="payment.png" alt="">
@@ -69,6 +73,7 @@
 </footer>
 <script>
   function addToCart() {
+    if(localStorage.getItem('login') || false){
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const newItem = { 
     id: 1,
@@ -84,11 +89,22 @@
   }
   localStorage.setItem('cart', JSON.stringify(cart));
   alert("Product added to cart!");
+  }
+  else{
+    showLoginPrompt();
+  }
 }
    function goToPay(){
       var link = document.getElementById('next');
       link.click();
     }
+    function showLoginPrompt() {
+            const isLoginConfirmed = confirm("Please Login To Continue..! Go to the login page?");
+            if (isLoginConfirmed) {
+                window.location.href = 'signIn.html';
+            }
+    }
+    
 </script>
 </body>
 </html>
