@@ -1,3 +1,5 @@
+
+let total = 0;
 let cart = JSON.parse(localStorage.getItem('cart'));
   display();
     function display(){
@@ -17,14 +19,15 @@ let cart = JSON.parse(localStorage.getItem('cart'));
             <span>${i + 1}. ${cart[i].name}</span>
             <span>${cart[i].price}</span>
              <span>${cart[i].quantity}</span>
-             <span>${cart[i].quantity} X ${cart[i].price} = ${eval(cart[i].quantity * cart[i].price)} </span>
+             <span> ${eval(cart[i].quantity * cart[i].price)} </span>
             <button onclick="cart.splice(${i},1);
+             localStorage.setItem('cart', JSON.stringify(cart));;
             display();"><img src="delete.png"></button>
           </div>  
         `;
+        total += cart[i].price * cart[i].quantity;
       }
-      displayElement.innerHTML = newHtml;
-      cart.s
+      displayElement.innerHTML = newHtml + `<h1>Grand Total :${total}</h1>`;
     }
     function goToPay(){
       var link = document.getElementById('next');

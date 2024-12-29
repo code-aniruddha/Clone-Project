@@ -13,7 +13,7 @@
 .list-items {
   overflow-x:hidden;
   display: grid;
-  grid-template-columns: 80px 80px 50px 80px 50px;
+  grid-template-columns: 200px 80px 50px 50px 50px;
 }
 
 .list-items img{
@@ -32,7 +32,7 @@ font-size: 20px;
 color: white;
 width: 100%;
 display: grid;
-grid-template-columns: 100px 80px 30px 100px 80px;
+grid-template-columns: 200px 80px 80px 80px 80px;
 text-align: center;
 row-gap: 20px;
 padding: 20px;
